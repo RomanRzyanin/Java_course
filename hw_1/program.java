@@ -1,9 +1,7 @@
-// import java.time.LocalDateTime;
-// import java.time.LocalTime;
-// import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
 public class program {
+    
     public static void main(String[] args) {
 
         System.out.println("Домашнее задание к семинару 1.\n");
@@ -17,51 +15,67 @@ public class program {
                 System.exit(0);
             }
             if (num.startsWith("1")){
-                //task1
+                factorial();
             }
-            else if (num == "2"){
-                //task2
+            else if (num.startsWith("2")){
+                task_2();
             }
-            else if (num == "3"){
-                //task3
+            else if (num.startsWith("3")){
+                task_3();
             }
-            else if (num == "4"){
-                //5task4
+            else if (num.startsWith("4")){
+                task_4();
             }
             else{
                 System.out.println("Вы ввели не верное число, введите число от 1 до 4. Для выхода нажмите 'q'");
             }
-            //    
+            // sc.close();                  
         }
-        
-        //num.close();
-
-        // System.out.println("Hello world!");
-
-        // LocalTime now = LocalTime.now(); 
-
-        // DateTimeFormatter formatter = DateTimeFormatter.ofPattern(null);
-        
-        // System.out.println(now);
-        // System.out.println(formatter.format(LocalDateTime.now())); 
+     
     }
+
+
+
+
+public static int factorial(int n) {
+
+    System.out.println("Нахождение факториала числа n!");
+    System.out.print("Введите число n = ");
+    Scanner sc = new Scanner(System.in);
+    int m = sc.nextInt();
+    if (n < 0){
+        System.out.println(n + "! = -1");
+    }
+    else if(n == 0 || n == 1){
+        System.out.println(n + "! = 1");
+    }
+    else{
+        int res = n * factorial(n - 1);
+        System.out.println();
+    }
+
+    //sc.close();
+
 
 }
 
 
-// public static void main(String[] args) {
+private static void task_2() {
 
-//     Scanner sc = new Scanner(System.in);
+    System.out.println("Это задача 2");
+}
 
-//     System.out.println("Please enter your name:  ");
 
-//     String name = sc.next();
 
-//     if(name.startsWith("A")){
-//         System.out.println("Are you Alex?");
-//     }
-//     else{
-//         System.out.println("You aren't Alex");
-//     }
+private static void task_3() {
 
-//     System.out.println("Hello " + name + "!");
+    System.out.println("Это задача 3");
+}
+
+
+
+private static void task_4() {
+
+    System.out.println("Это задача 4");
+}
+}
