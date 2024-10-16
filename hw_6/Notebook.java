@@ -30,7 +30,7 @@ public class Notebook {
 
     @Override
     public String toString() {
-        return "Notebook {" + "RAM=" + ram + " GB, HDD=" + hdd + " GB, OS='" + os + '\'' + ", Diagonal='" + display + '\'' + '}';//????
+        return "Notebook {" + "RAM = " + ram + " GB, HDD = " + hdd + " GB, OS = '" + os + '\'' + ", Display = '" + display + '\'' + '}';//????
     }
 
     @Override

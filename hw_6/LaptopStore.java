@@ -25,17 +25,17 @@ public class LaptopStore {
             }
         System.out.print("-->");
         int criterion = scanner.nextInt();
-        scanner.nextLine(); // Очистка буфера от символа новой строки
+        scanner.nextLine(); 
         switch (criterion) {
         case 1:
             System.out.print("Введите минимальное значение ОЗУ (в ГБ): ");
             filters.put("ram", scanner.nextInt());
-            scanner.nextLine(); // Очистка буфера от символа новой строки
+            scanner.nextLine(); 
             break;
         case 2:
             System.out.print("Введите минимальное значение объема HHD (в ГБ): ");
             filters.put("hdd", scanner.nextInt());
-            scanner.nextLine(); // Очистка буфера от символа новой строки
+            scanner.nextLine(); 
             break;
         case 3:
             System.out.print("Введите операционную систему: ");
@@ -49,9 +49,9 @@ public class LaptopStore {
         default:
             System.out.println("Некорректный критерий.");
         }
-        System.out.print("Хотите добавить еще один критерий? (Если да нажмите 1, нет - 2): ");
+        System.out.print("Хотите добавить еще один критерий? (Если да, нажмите 1, нет - 2): ");
         String response = scanner.nextLine();
-        continueFiltering = response.equalsIgnoreCase("1"); //   response.equalsIgnoreCase("Да");
+        continueFiltering = response.equalsIgnoreCase("1"); 
         }
         filterNotebooks(notebooks, filters);
        
