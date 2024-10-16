@@ -43,7 +43,8 @@ public class LaptopStore {
             break;
         case 4:
             System.out.print("Введите минимальную диагональ дисплея: ");
-            filters.put("display", scanner.nextLine());
+            filters.put("display", scanner.nextDouble());
+            scanner.nextLine();
             break;
         default:
             System.out.println("Некорректный критерий.");
@@ -60,20 +61,20 @@ public class LaptopStore {
 
     public static void filterNotebooks(Set<Notebook> notebooks, Map<String, Object> filters) {
         for (Notebook notebook : notebooks) {
-            boolean matches = true;
+            boolean key = true;
             if (filters.containsKey("ram") && notebook.getRam() < (int) filters.get("ram")) {
-                matches = false;
+                key = false;
             }
             if (filters.containsKey("hdd") && notebook.getHdd() < (int) filters.get("hdd")) {
-                matches = false;
+                key = false;
             }
             if (filters.containsKey("os") && !notebook.getOs().equalsIgnoreCase((String) filters.get("os"))) {
-                matches = false;
+                key = false;
             }
             if (filters.containsKey("display") && notebook.getDisplay() < (double) filters.get("display")){
-                matches = false; 
+                key = false; 
             }
-            if (matches) {
+            if (key) {
                 System.out.println(notebook);
             }
         }
